@@ -44,7 +44,7 @@ setup(
     author_email='sdk@cloud.ionos.com',
     long_description=long_desc,
     long_description_content_type='text/markdown',
-    url="https://github.com//",
+    url="https://github.com/ionos-cloud/sdk-python-container-registry",
     keywords=["OpenAPI", "OpenAPI-Generator", "Container Registry service"],
     install_requires=REQUIRES,
     packages=['ionoscloud_container_registry', 'ionoscloud_container_registry.api', 'ionoscloud_container_registry.models'],

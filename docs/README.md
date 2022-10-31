@@ -1,7 +1,3 @@
-[![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general)
-[![PyPI version](https://img.shields.io/pypi/v/ionoscloud-container-registry)](https://pypi.org/project/ionoscloud-container-registry/)
-
-
 # ionoscloud-container-registry
 Container Registry service enables IONOS clients to manage docker and OCI compliant registries for use by their managed Kubernetes clusters. Use a Container Registry to ensure you have a privately accessed registry to efficiently support image pulls.
 
