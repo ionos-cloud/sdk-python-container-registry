@@ -20,6 +20,7 @@ class RegistriesApi(object):
     def registries_delete(self, registry_id, **kwargs):  # noqa: E501
         """Delete registry  # noqa: E501
 
+          # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -49,6 +50,7 @@ class RegistriesApi(object):
     def registries_delete_with_http_info(self, registry_id, **kwargs):  # noqa: E501
         """Delete registry  # noqa: E501
 
+          # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -305,10 +307,10 @@ class RegistriesApi(object):
 
         :param filter_name: The registry name to search for
         :type filter_name: str
-        :param limit: The maximum number of elements to return (used together with nextPageToken for pagination)
+        :param limit: The maximum number of elements to return (used together with pagination.token for pagination)
         :type limit: str
-        :param next_page_token: The next page from the complete list of elements (used together with limit for pagination)
-        :type next_page_token: str
+        :param pagination_token: An opaque token used to iterate the set of results (used together with limit for pagination)
+        :type pagination_token: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -339,10 +341,10 @@ class RegistriesApi(object):
 
         :param filter_name: The registry name to search for
         :type filter_name: str
-        :param limit: The maximum number of elements to return (used together with nextPageToken for pagination)
+        :param limit: The maximum number of elements to return (used together with pagination.token for pagination)
         :type limit: str
-        :param next_page_token: The next page from the complete list of elements (used together with limit for pagination)
-        :type next_page_token: str
+        :param pagination_token: An opaque token used to iterate the set of results (used together with limit for pagination)
+        :type pagination_token: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -371,7 +373,7 @@ class RegistriesApi(object):
         all_params = [
             'filter_name',
             'limit',
-            'next_page_token'
+            'pagination_token'
         ]
         all_params.extend(
             [
@@ -403,8 +405,8 @@ class RegistriesApi(object):
             query_params.append(('filter.name', local_var_params['filter_name']))  # noqa: E501
         if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
             query_params.append(('limit', local_var_params['limit']))  # noqa: E501
-        if 'next_page_token' in local_var_params and local_var_params['next_page_token'] is not None:  # noqa: E501
-            query_params.append(('nextPageToken', local_var_params['next_page_token']))  # noqa: E501
+        if 'pagination_token' in local_var_params and local_var_params['pagination_token'] is not None:  # noqa: E501
+            query_params.append(('pagination.token', local_var_params['pagination_token']))  # noqa: E501
 
         header_params = {}
 
@@ -597,7 +599,7 @@ class RegistriesApi(object):
     def registries_post(self, post_registry_input, **kwargs):  # noqa: E501
         """Create container registry  # noqa: E501
 
-        Create a registry to hold container images or OCI compliant artifacts - \"name\" must have passed validation - \"location\" must be one of the available location IDs - \"garbageCollectionSchedule\" time and days of the week for runs  # noqa: E501
+        Create a registry to hold container images or OCI compliant artifacts - \"name\" must have passed validation - \"location\" must be one of the available location IDs - \"garbageCollectionSchedule\" time and days of the week for runs - \"features\": \"vulnerabilityScanning\" default is enabled  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -627,7 +629,7 @@ class RegistriesApi(object):
     def registries_post_with_http_info(self, post_registry_input, **kwargs):  # noqa: E501
         """Create container registry  # noqa: E501
 
-        Create a registry to hold container images or OCI compliant artifacts - \"name\" must have passed validation - \"location\" must be one of the available location IDs - \"garbageCollectionSchedule\" time and days of the week for runs  # noqa: E501
+        Create a registry to hold container images or OCI compliant artifacts - \"name\" must have passed validation - \"location\" must be one of the available location IDs - \"garbageCollectionSchedule\" time and days of the week for runs - \"features\": \"vulnerabilityScanning\" default is enabled  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -738,7 +740,7 @@ class RegistriesApi(object):
     def registries_put(self, registry_id, put_registry_input, **kwargs):  # noqa: E501
         """Create or replace a container registry  # noqa: E501
 
-        Create/replace a registry to hold container images or OCI compliant artifacts  **On create** - \"name\" must have passed validation - \"location\" must be one of the available location IDs  **On update** - \"name\" cannot be changed - \"location\" cannot be changed  **On create or update** - \"garbageCollectionSchedule\": time and days of the week for runs   # noqa: E501
+        Create/replace a registry to hold container images or OCI compliant artifacts **On create** - \"name\" must have passed validation - \"location\" must be one of the available location IDs **On update** - \"name\" cannot be changed - \"location\" cannot be changed **On create or update** - \"garbageCollectionSchedule\": time and days of the week for runs   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -770,7 +772,7 @@ class RegistriesApi(object):
     def registries_put_with_http_info(self, registry_id, put_registry_input, **kwargs):  # noqa: E501
         """Create or replace a container registry  # noqa: E501
 
-        Create/replace a registry to hold container images or OCI compliant artifacts  **On create** - \"name\" must have passed validation - \"location\" must be one of the available location IDs  **On update** - \"name\" cannot be changed - \"location\" cannot be changed  **On create or update** - \"garbageCollectionSchedule\": time and days of the week for runs   # noqa: E501
+        Create/replace a registry to hold container images or OCI compliant artifacts **On create** - \"name\" must have passed validation - \"location\" must be one of the available location IDs **On update** - \"name\" cannot be changed - \"location\" cannot be changed **On create or update** - \"garbageCollectionSchedule\": time and days of the week for runs   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

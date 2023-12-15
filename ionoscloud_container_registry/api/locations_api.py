@@ -20,6 +20,7 @@ class LocationsApi(object):
     def locations_get(self, **kwargs):  # noqa: E501
         """Get container registry locations  # noqa: E501
 
+          # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -47,6 +48,7 @@ class LocationsApi(object):
     def locations_get_with_http_info(self, **kwargs):  # noqa: E501
         """Get container registry locations  # noqa: E501
 
+          # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

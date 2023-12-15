@@ -17,6 +17,8 @@ All URIs are relative to *https://api.ionos.com/containerregistries*
 
 Delete registry
 
+
+
 ### Example
 
 ```python
@@ -49,7 +51,7 @@ with ionoscloud_container_registry.ApiClient(configuration) as api_client:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **registry_id** | [**str**](.md)| The unique ID of the registry |  |
+| **registry_id** | **str**| The unique ID of the registry |  |
 
 ### Return type
 
@@ -104,7 +106,7 @@ with ionoscloud_container_registry.ApiClient(configuration) as api_client:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **registry_id** | [**str**](.md)| The unique ID of the registry |  |
+| **registry_id** | **str**| The unique ID of the registry |  |
 
 ### Return type
 
@@ -120,7 +122,7 @@ basicAuth, tokenAuth
  - **Accept**: application/json
 
 # **registries_get**
-> RegistriesResponse registries_get(filter_name=filter_name, limit=limit, next_page_token=next_page_token)
+> RegistriesResponse registries_get(filter_name=filter_name, limit=limit, pagination_token=pagination_token)
 
 List all container registries
 
@@ -159,8 +161,8 @@ with ionoscloud_container_registry.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **filter_name** | **str**| The registry name to search for | [optional]  |
-| **limit** | **str**| The maximum number of elements to return (used together with nextPageToken for pagination) | [optional] [default to &#39;100&#39;] |
-| **next_page_token** | **str**| The next page from the complete list of elements (used together with limit for pagination) | [optional]  |
+| **limit** | **str**| The maximum number of elements to return (used together with pagination.token for pagination) | [optional] [default to &#39;100&#39;] |
+| **pagination_token** | **str**| An opaque token used to iterate the set of results (used together with limit for pagination) | [optional]  |
 
 ### Return type
 
@@ -216,8 +218,8 @@ with ionoscloud_container_registry.ApiClient(configuration) as api_client:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **registry_id** | [**str**](.md)| The unique ID of the registry |  |
-| **patch_registry_input** | [**PatchRegistryInput**](PatchRegistryInput.md)|  |  |
+| **registry_id** | **str**| The unique ID of the registry |  |
+| **patch_registry_input** | [**PatchRegistryInput**](../models/PatchRegistryInput.md)|  |  |
 
 ### Return type
 
@@ -237,7 +239,7 @@ basicAuth, tokenAuth
 
 Create container registry
 
-Create a registry to hold container images or OCI compliant artifacts - \"name\" must have passed validation - \"location\" must be one of the available location IDs - \"garbageCollectionSchedule\" time and days of the week for runs
+Create a registry to hold container images or OCI compliant artifacts - \"name\" must have passed validation - \"location\" must be one of the available location IDs - \"garbageCollectionSchedule\" time and days of the week for runs - \"features\": \"vulnerabilityScanning\" default is enabled
 
 ### Example
 
@@ -272,7 +274,7 @@ with ionoscloud_container_registry.ApiClient(configuration) as api_client:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **post_registry_input** | [**PostRegistryInput**](PostRegistryInput.md)|  |  |
+| **post_registry_input** | [**PostRegistryInput**](../models/PostRegistryInput.md)|  |  |
 
 ### Return type
 
@@ -292,7 +294,7 @@ basicAuth, tokenAuth
 
 Create or replace a container registry
 
-Create/replace a registry to hold container images or OCI compliant artifacts  **On create** - \"name\" must have passed validation - \"location\" must be one of the available location IDs  **On update** - \"name\" cannot be changed - \"location\" cannot be changed  **On create or update** - \"garbageCollectionSchedule\": time and days of the week for runs 
+Create/replace a registry to hold container images or OCI compliant artifacts **On create** - \"name\" must have passed validation - \"location\" must be one of the available location IDs **On update** - \"name\" cannot be changed - \"location\" cannot be changed **On create or update** - \"garbageCollectionSchedule\": time and days of the week for runs 
 
 ### Example
 
@@ -328,8 +330,8 @@ with ionoscloud_container_registry.ApiClient(configuration) as api_client:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **registry_id** | [**str**](.md)| The unique ID of the registry |  |
-| **put_registry_input** | [**PutRegistryInput**](PutRegistryInput.md)|  |  |
+| **registry_id** | **str**| The unique ID of the registry |  |
+| **put_registry_input** | [**PutRegistryInput**](../models/PutRegistryInput.md)|  |  |
 
 ### Return type
 

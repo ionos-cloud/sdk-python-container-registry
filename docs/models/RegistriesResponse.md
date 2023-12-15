@@ -7,8 +7,7 @@
 | **href** | **str** |  | [optional]  |
 | **id** | **str** |  | [optional]  |
 | **items** | [**list[RegistryResponse]**](RegistryResponse.md) |  | [optional]  |
-| **limit** | **int** |  |  |
-| **next_page_token** | **str** |  |  |
+| **pagination** | [**RegistryPagination**](RegistryPagination.md) |  |  |
 | **type** | **str** |  | [optional]  |
 
 

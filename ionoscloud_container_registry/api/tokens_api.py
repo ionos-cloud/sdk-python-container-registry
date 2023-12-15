@@ -20,6 +20,7 @@ class TokensApi(object):
     def registries_tokens_delete(self, registry_id, token_id, **kwargs):  # noqa: E501
         """Delete token  # noqa: E501
 
+          # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -51,6 +52,7 @@ class TokensApi(object):
     def registries_tokens_delete_with_http_info(self, registry_id, token_id, **kwargs):  # noqa: E501
         """Delete token  # noqa: E501
 
+          # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -322,6 +324,7 @@ class TokensApi(object):
     def registries_tokens_get(self, registry_id, **kwargs):  # noqa: E501
         """List all tokens for the container registry  # noqa: E501
 
+          # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -355,6 +358,7 @@ class TokensApi(object):
     def registries_tokens_get_with_http_info(self, registry_id, **kwargs):  # noqa: E501
         """List all tokens for the container registry  # noqa: E501
 
+          # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

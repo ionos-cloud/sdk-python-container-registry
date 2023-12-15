@@ -17,6 +17,8 @@ All URIs are relative to *https://api.ionos.com/containerregistries*
 
 Delete token
 
+
+
 ### Example
 
 ```python
@@ -50,8 +52,8 @@ with ionoscloud_container_registry.ApiClient(configuration) as api_client:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **registry_id** | [**str**](.md)| The unique ID of the registry |  |
-| **token_id** | [**str**](.md)| The unique ID of the token |  |
+| **registry_id** | **str**| The unique ID of the registry |  |
+| **token_id** | **str**| The unique ID of the token |  |
 
 ### Return type
 
@@ -107,8 +109,8 @@ with ionoscloud_container_registry.ApiClient(configuration) as api_client:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **registry_id** | [**str**](.md)| The unique ID of the registry |  |
-| **token_id** | [**str**](.md)| The unique ID of the token |  |
+| **registry_id** | **str**| The unique ID of the registry |  |
+| **token_id** | **str**| The unique ID of the token |  |
 
 ### Return type
 
@@ -127,6 +129,8 @@ basicAuth, tokenAuth
 > TokensResponse registries_tokens_get(registry_id, offset=offset, limit=limit)
 
 List all tokens for the container registry
+
+
 
 ### Example
 
@@ -161,7 +165,7 @@ with ionoscloud_container_registry.ApiClient(configuration) as api_client:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **registry_id** | [**str**](.md)| The unique ID of the registry |  |
+| **registry_id** | **str**| The unique ID of the registry |  |
 | **offset** | **str**| The first element (from the complete list of the elements) to include in the response (used together with limit for pagination) | [optional] [default to &#39;0&#39;] |
 | **limit** | **str**| The maximum number of elements to return (used together with offset for pagination) | [optional] [default to &#39;100&#39;] |
 
@@ -220,9 +224,9 @@ with ionoscloud_container_registry.ApiClient(configuration) as api_client:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **registry_id** | [**str**](.md)| The unique ID of the registry |  |
-| **token_id** | [**str**](.md)| The unique ID of the token |  |
-| **patch_token_input** | [**PatchTokenInput**](PatchTokenInput.md)|  |  |
+| **registry_id** | **str**| The unique ID of the registry |  |
+| **token_id** | **str**| The unique ID of the token |  |
+| **patch_token_input** | [**PatchTokenInput**](../models/PatchTokenInput.md)|  |  |
 
 ### Return type
 
@@ -278,8 +282,8 @@ with ionoscloud_container_registry.ApiClient(configuration) as api_client:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **registry_id** | [**str**](.md)| The unique ID of the registry |  |
-| **post_token_input** | [**PostTokenInput**](PostTokenInput.md)|  |  |
+| **registry_id** | **str**| The unique ID of the registry |  |
+| **post_token_input** | [**PostTokenInput**](../models/PostTokenInput.md)|  |  |
 
 ### Return type
 
@@ -336,9 +340,9 @@ with ionoscloud_container_registry.ApiClient(configuration) as api_client:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **registry_id** | [**str**](.md)| The unique ID of the registry |  |
+| **registry_id** | **str**| The unique ID of the registry |  |
 | **token_id** | **str**| The unique ID of the token |  |
-| **put_token_input** | [**PutTokenInput**](PutTokenInput.md)|  |  |
+| **put_token_input** | [**PutTokenInput**](../models/PutTokenInput.md)|  |  |
 
 ### Return type
 

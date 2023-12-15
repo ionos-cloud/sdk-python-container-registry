@@ -12,6 +12,8 @@ All URIs are relative to *https://api.ionos.com/containerregistries*
 
 Get container registry locations
 
+
+
 ### Example
 
 ```python
