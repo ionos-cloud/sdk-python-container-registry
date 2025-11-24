@@ -20,17 +20,16 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from ionoscloud_container_registry.models.day import Day
 from typing import Optional, Set
 from typing_extensions import Self
 
-class WeeklySchedule(BaseModel):
+class ErrorMessagesInner(BaseModel):
     """
-    WeeklySchedule
+    ErrorMessagesInner
     """ # noqa: E501
-    days: Optional[List[Day]] = None
-    time: Optional[StrictStr] = Field(default=None, description="UTC time of day e.g. 01:00:00 - as defined by partial-time - RFC3339")
-    __properties: ClassVar[List[str]] = ["days", "time"]
+    error_code: Optional[StrictStr] = Field(default=None, description="Application internal error code ", alias="errorCode")
+    message: Optional[StrictStr] = Field(default=None, description="A human readable explanation specific to this occurrence of the problem. ")
+    __properties: ClassVar[List[str]] = ["errorCode", "message"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -50,7 +49,7 @@ class WeeklySchedule(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of WeeklySchedule from a JSON string"""
+        """Create an instance of ErrorMessagesInner from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -75,7 +74,7 @@ class WeeklySchedule(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of WeeklySchedule from a dict"""
+        """Create an instance of ErrorMessagesInner from a dict"""
         if obj is None:
             return None
 
@@ -83,8 +82,8 @@ class WeeklySchedule(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "days": obj.get("days"),
-            "time": obj.get("time")
+            "errorCode": obj.get("errorCode"),
+            "message": obj.get("message")
         })
         return _obj
 
